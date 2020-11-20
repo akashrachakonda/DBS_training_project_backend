@@ -1,0 +1,11 @@
+package com.travelsafeapp.org.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+//import com.example.demo.model.Location_Based_Offers;
+
+import com.travelsafeapp.org.model.LocationBasedOffers;
+
+public interface LBORepo extends JpaRepository<LocationBasedOffers,Integer>{
+
+}

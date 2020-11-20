@@ -1,0 +1,10 @@
+package com.example.demo.DAO;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.model.Location_Based_Offers;
+
+public interface LBO_repo extends JpaRepository<Location_Based_Offers,Integer>{
+	
+
+}

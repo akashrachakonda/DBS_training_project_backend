@@ -1,0 +1,5 @@
+package com.travelsafeapp.org.model;
+
+public class LocationBasedOffers {
+
+}

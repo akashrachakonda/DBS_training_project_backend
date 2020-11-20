@@ -1,0 +1,55 @@
+package com.travelsafeapp.org.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.travelsafeapp.org.dao.LBORepo;
+import com.travelsafeapp.org.model.LocationBasedOffers;
+import java.util.*;
+
+@RestController
+public class LBOController {
+	
+	@Autowired
+	private LBORepo repo;
+	
+	@GetMapping("/offers/{category}/{country}")
+	public void getOffers(@PathVariable String category,@PathVariable String country) {
+//		if(category.equals("all")) {
+//		return repo.findByCountryCode(country);
+//		}
+//	
+//		return repo.findByOfferCategoryAndCountryCode(category,country);
+		 String possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		for(int i=1;i<=1000;i++)
+		{
+			String coupon = "";
+			for(int j=1;j<=5;j++)
+			{
+				Random random = new Random();
+				int randomWithNextInt = random.nextInt(62);
+				 coupon=coupon+possible.charAt(randomWithNextInt);
+				
+			}
+//			repo.setOfferBySerialNum(coupon,i);
+			LocationBasedOffers lbo_temp= repo.getOne(i);
+			lbo_temp.setCouponCode(coupon);
+			repo.save(lbo_temp);
+			
+			coupon="";
+		}
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

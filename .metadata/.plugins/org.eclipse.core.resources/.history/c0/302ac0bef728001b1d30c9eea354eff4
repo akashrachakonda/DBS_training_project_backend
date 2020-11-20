@@ -1,0 +1,91 @@
+package com.example.demo.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="lbo_3")
+public class Location_Based_Offers {
+	
+	@Id
+	private int SerialNum;
+	private String Latitude;
+	private String Longitude;
+	private String countryCode ;
+	private String OfferId;
+	private String OfferCategory;
+	private String OfferDesc;
+	private String StartDate;
+	private String EndDate;
+	private String IconName;
+	
+	public int getSerialNum() {
+		return SerialNum;
+	}
+	public void setSerialNum(int serialNum) {
+		SerialNum = serialNum;
+	}
+	public String getLatitude() {
+		return Latitude;
+	}
+	public void setLatitude(String latitude) {
+		Latitude = latitude;
+	}
+	public String getLongitude() {
+		return Longitude;
+	}
+	public void setLongitude(String longitude) {
+		Longitude = longitude;
+	}
+	public String getCountryCode() {
+		return CountryCode;
+	}
+	public void setCountryCode(String countryCode) {
+		CountryCode = countryCode;
+	}
+	public String getOfferId() {
+		return OfferId;
+	}
+	public void setOfferId(String offerId) {
+		OfferId = offerId;
+	}
+	public String getOfferCategory() {
+		return OfferCategory;
+	}
+	public void setOfferCategory(String offerCategory) {
+		OfferCategory = offerCategory;
+	}
+	public String getOfferDesc() {
+		return OfferDesc;
+	}
+	public void setOfferDesc(String offerDesc) {
+		OfferDesc = offerDesc;
+	}
+	public String getStartDate() {
+		return StartDate;
+	}
+	public void setStartDate(String startDate) {
+		StartDate = startDate;
+	}
+	public String getEndDate() {
+		return EndDate;
+	}
+	public void setEndDate(String endDate) {
+		EndDate = endDate;
+	}
+	public String getIconName() {
+		return IconName;
+	}
+	public void setIconName(String iconName) {
+		IconName = iconName;
+	}
+
+	
+	
+	
+	
+	
+	
+
+}

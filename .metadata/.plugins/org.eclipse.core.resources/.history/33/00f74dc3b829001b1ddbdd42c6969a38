@@ -1,0 +1,5 @@
+package com.travelsafeapp.org.dao;
+
+public interface LBORepo {
+
+}
