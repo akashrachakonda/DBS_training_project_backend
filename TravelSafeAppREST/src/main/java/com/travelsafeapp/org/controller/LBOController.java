@@ -29,11 +29,7 @@ public class LBOController {
 
 	return repo.findByOfferCategoryAndCountryCode(category,country);
 		
-		
-		
-		
-		
-		
+
 	
 	}
 	
